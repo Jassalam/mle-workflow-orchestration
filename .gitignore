@@ -173,3 +173,6 @@ data/*.parquet
 
 # Local linting
 .markdownlint.json
+
+# Local Claude plugin database
+ruvector.db
