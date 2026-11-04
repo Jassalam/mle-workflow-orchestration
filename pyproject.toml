@@ -18,7 +18,8 @@ dependencies = [
 required-version = ">=0.13.5"
 # Apply certificate fixes without adding unused runtime packages.
 # Prefect's server still uses FastAPI's removed min_items argument.
-constraint-dependencies = ["certifi>=2026.10.19", "pip>=26.2.2", "fastapi<0.155"]
+# Prefect's scheduler bulk-inserts a hybrid `state` key, which SQLAlchemy 2.1 rejects.
+constraint-dependencies = ["certifi>=2026.10.19", "pip>=26.2.2", "fastapi<0.155", "sqlalchemy<2.1"]
 
 [tool.rumdl]
 disable = ["MD013"]
